@@ -30,7 +30,7 @@ namespace CardLinq
             base.RemoveAt(index);
             return card;
         }
-        public void Shuffle()
+        public Deck Shuffle()
         {
             /* Use new List<Card>(this) to create a copy of the deck, then pick a random card
             * from copy, call copy.RemoveAt to remove it, and Add(card) to add it */
@@ -43,6 +43,7 @@ namespace CardLinq
                 cards.RemoveAt(index);
                 Add(card);
             }
+            return this;
         }
         public void Sort()
         {
